@@ -1,9 +1,16 @@
 @import "vars.scss";
+@import "linhasAnimadas.scss";
+//@import "textoTridimensional.scss";
+@import "textoGradiente.scss";
+@import "textoMetamorfo.scss";
+@import "textoOnda.scss";
+@import "textoLiquido.scss";
 
 body {
     font-family: $fonte;
     background-color: $bg_fundo;
     color: $texto1;
+    margin: 0px;
     margin-top: 100px;
 }
 #barra{
@@ -15,7 +22,7 @@ body {
     height: 20px;
     color: $texto1;
     text-decoration: none;
-    padding: 20px;
+    padding: 20px 0px 20px 0px;
     margin: 0px;
     top: 0px;
 
@@ -45,9 +52,14 @@ body {
         display: inline-block;
     }
 }
+
+/****************************************
+************** NAVEGAÇÃO ****************
+****************************************/
 nav {
     padding-left: 5%;
     padding-right: 5%;
+    min-height: 500px;
 }
 a:link, a:visited {
     color: $link1;
@@ -56,4 +68,12 @@ a:link, a:visited {
 a:hover,a:active {
     color: $link2;
     text-decoration: none;
+}
+footer {
+    background-color: $bg_bloco;
+    text-align: center;
+    width: 100%;
+    padding: 50px 0px 50px 0px;
+    margin: 0px;
+    margin-top: 20px;
 }

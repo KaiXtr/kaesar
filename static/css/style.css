@@ -1,8 +1,77 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+svg#logotipo {
+  font-size: 10vw;
+  width: 100%;
+  height: 80vh;
+  text-align: center;
+}
+
+.texto--linha {
+  font-size: 0.5em;
+}
+
+.texto-copia {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 7% 28%;
+  stroke-width: 2px;
+  stroke-linecap: butt;
+  animation: linhas-animadas 12s infinite linear;
+}
+.texto-copia:nth-child(1) {
+  stroke: #360745;
+  stroke-dashoffset: 7%;
+}
+.texto-copia:nth-child(2) {
+  stroke: #1cd6a7;
+  stroke-dashoffset: 14%;
+}
+.texto-copia:nth-child(3) {
+  stroke: #e7e44b;
+  stroke-dashoffset: 21%;
+}
+.texto-copia:nth-child(4) {
+  stroke: #69df8c;
+  stroke-dashoffset: 28%;
+}
+.texto-copia:nth-child(5) {
+  stroke: #bc48d3;
+  stroke-dashoffset: 35%;
+}
+
+@keyframes linhas-animadas {
+  50% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 52.5%;
+  }
+}
+.animate-charcter {
+  text-transform: uppercase;
+  background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
 body {
   font-family: "Oswald", sans-serif;
   background-color: #111111;
   color: #e1ffc0;
+  margin: 0px;
   margin-top: 100px;
 }
 
@@ -15,7 +84,7 @@ body {
   height: 20px;
   color: #e1ffc0;
   text-decoration: none;
-  padding: 20px;
+  padding: 20px 0px 20px 0px;
   margin: 0px;
   top: 0px;
 }
@@ -44,9 +113,13 @@ body {
   display: inline-block;
 }
 
+/****************************************
+************** NAVEGAÇÃO ****************
+****************************************/
 nav {
   padding-left: 5%;
   padding-right: 5%;
+  min-height: 500px;
 }
 
 a:link, a:visited {
@@ -57,4 +130,13 @@ a:link, a:visited {
 a:hover, a:active {
   color: #11441a;
   text-decoration: none;
+}
+
+footer {
+  background-color: #0f2c14;
+  text-align: center;
+  width: 100%;
+  padding: 50px 0px 50px 0px;
+  margin: 0px;
+  margin-top: 20px;
 }/*# sourceMappingURL=style.css.map */

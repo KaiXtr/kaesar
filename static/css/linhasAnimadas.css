@@ -1,0 +1,46 @@
+svg#logotipo {
+  font-size: 10vw;
+  width: 100%;
+  height: 80vh;
+  text-align: center;
+}
+
+.texto--linha {
+  font-size: 0.5em;
+}
+
+.texto-copia {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 7% 28%;
+  stroke-width: 2px;
+  stroke-linecap: butt;
+  animation: linhas-animadas 12s infinite linear;
+}
+.texto-copia:nth-child(1) {
+  stroke: #360745;
+  stroke-dashoffset: 7%;
+}
+.texto-copia:nth-child(2) {
+  stroke: #1cd6a7;
+  stroke-dashoffset: 14%;
+}
+.texto-copia:nth-child(3) {
+  stroke: #e7e44b;
+  stroke-dashoffset: 21%;
+}
+.texto-copia:nth-child(4) {
+  stroke: #69df8c;
+  stroke-dashoffset: 28%;
+}
+.texto-copia:nth-child(5) {
+  stroke: #bc48d3;
+  stroke-dashoffset: 35%;
+}
+
+@keyframes linhas-animadas {
+  50% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 52.5%;
+  }
+}/*# sourceMappingURL=linhasAnimadas.css.map */

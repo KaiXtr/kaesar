@@ -1,0 +1,39 @@
+$cores: #360745, #1cd6a7, #e7e44b, #69df8c, #bc48d3;
+$maximo: 5;
+$tamanhoDaLinha: 7%; 
+
+svg#logotipo {
+    font-size: 10vw;
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+}
+.texto--linha {
+    font-size: .5em;
+}
+.texto-copia {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: $tamanhoDaLinha $tamanhoDaLinha * ($maximo - 1);
+    stroke-width: 2px;
+    stroke-linecap: butt;
+
+    animation: linhas-animadas 12s infinite linear;
+
+    //O programa irá fazer uma iteração para cada uma das 5 linhas e executar
+    //a animação das linhas, alterando a cor e o stroke-dashoffset
+    @for $item from 1 through $maximo {
+        $stroke-color: nth($cores, $item);
+        
+        &:nth-child(#{$item}) {
+            stroke: $stroke-color;
+            stroke-dashoffset: $tamanhoDaLinha * $item;
+        }
+    }
+}
+@keyframes linhas-animadas {
+    50% {
+        stroke-dashoffset: $tamanhoDaLinha * $maximo;  
+        stroke-dasharray: 0 $tamanhoDaLinha * $maximo * 1.5;
+    }
+}
