@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block titulo %}{% endblock %}Bandoleiros</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'media/favicon.ico' %}" >
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <!--script type="javascript" src="{% static 'js/script.js' %}"></script-->
+</head>
+<body>
+    <div id="barra">
+        <ul>
+            <li><a href="/admin/">Admin</a></li>
+            <li><a href="/">Justiça</a></li>
+            <li><a href="/pers/">Personagens</a></li>
+        </ul>
+    </div>
+    {% block banner %}{% endblock %}
+    <nav>
+    {% block conteudo %}{% endblock %}
+    </nav>
+</body>
+</html>

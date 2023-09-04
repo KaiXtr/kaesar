@@ -1,0 +1,16 @@
+{% extends 'master.html' %}
+
+{% block titulo %}
+    {{p.nome}} | 
+{% endblock %}
+
+{% block conteudo %}
+
+    <h1>{{p.nome}}</h1>
+    <p>
+        Também é conhecido(a) como {{p.apelido}}, nasceu em
+        {{p.nascimento.day}} de {{p.nascimento.month}} de {{p.nascimento.year}}.
+    </p>
+    <a href="/pers">Voltar</a>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+@import "vars.scss";
+
+body {
+    font-family: $fonte;
+    background-color: $bg_fundo;
+    color: $texto1;
+    margin-top: 100px;
+}
+#barra{
+    background-color: $bg_barra;
+    text-align: center;
+    align-items: middle;
+    position: fixed;
+    width: 100%;
+    height: 20px;
+    color: $texto1;
+    text-decoration: none;
+    padding: 20px;
+    margin: 0px;
+    top: 0px;
+
+    ul {
+        align-items: center;
+        margin: 0px;
+        padding: 0px;
+
+        li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 5%;
+        }
+    }
+}
+#img-galeria {
+    width: 100%;
+    height: 300px;
+    white-space: nowrap;
+    margin: 0px;
+
+    .img-slide {
+        width: 300px;
+        height: 300px;
+        padding: 0px;
+        margin: 0px;
+        display: inline-block;
+    }
+}
+nav {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+a:link, a:visited {
+    color: $link1;
+    text-decoration: none;
+}
+a:hover,a:active {
+    color: $link2;
+    text-decoration: none;
+}

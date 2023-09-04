@@ -1,0 +1,34 @@
+{% extends 'master.html' %}
+
+{% block titulo %}
+    Personagens | 
+{% endblock %}
+
+{% block banner %}
+    <div id="img-galeria">
+        <div class="img-slide" style="background-image: url('https://i.pinimg.com/564x/3b/cf/4a/3bcf4af14f0898598981f1de311fd4c6.jpg');"></div>
+        <div class="img-slide" style="background-image: url('https://i.pinimg.com/736x/a1/85/7d/a1857d476f4830950b79e829cc01936e.jpg');"></div>
+        <div class="img-slide" style="background-image: url('https://i.pinimg.com/564x/ab/2f/a7/ab2fa76eb41c0021bb29e30a1ca5abfd.jpg');"></div>
+        <div class="img-slide" style="background-image: url('https://i.pinimg.com/564x/07/ee/a6/07eea6bfb0a15208763da9581abe2398.jpg');"></div>
+        <div class="img-slide" style="background-image: url('https://i.pinimg.com/564x/7f/54/13/7f54131d2a26bf89a22339b74c62ba4a.jpg');"></div>
+    </div>
+{% endblock %}
+
+{% block conteudo %}
+    <h1>Personagens</h1>
+    <table>
+        <tr>
+            {% for i in colunas %}
+            <th>{{i}}</th>
+            {% endfor %}
+        </tr>
+        {% for i in personagens %}
+            <tr>
+                <td><a href="/pers/{{i.nome.lower | lower}}">{{i.nome}}</a></td>
+                <td>{{i.apelido}}</td>
+                <td>{{i.nascimento.year}}</td>
+                <td>{{i.signo}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
